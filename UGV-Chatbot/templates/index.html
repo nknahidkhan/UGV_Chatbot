@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UGV Smart Assistant</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <!-- ── Navbar ─────────────────────────────────────── -->
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <div class="logo-icon">🎓</div>
+      <span>UGV Smart Assistant</span>
+    </div>
+    <div class="navbar-links">
+      <a href="/"             class="nav-link active"><span>💬</span> Chat</a>
+      <a href="/exam-routine" class="nav-link"><span>📋</span> Exam Routine</a>
+      <a href="/admin"        class="nav-link"><span>⚙️</span> Admin</a>
+      <button class="theme-toggle" id="themeToggle" title="Toggle theme">☀️</button>
+    </div>
+  </nav>
+
+  <!-- ── Chat ───────────────────────────────────────── -->
+  <div class="chat-container">
+
+    <div class="chat-header">
+      <h2>University of Global Village</h2>
+      <p>Your AI-powered assistant for all UGV queries</p>
+    </div>
+
+    <!-- Quick suggestions -->
+    <div class="suggestions">
+      <button class="chip" data-msg="Show semester 5 exam routine">📋 Sem 5 Exams</button>
+      <button class="chip" data-msg="What are the admission requirements?">🎓 Admission</button>
+      <button class="chip" data-msg="Tell me about the CSE department">🏫 CSE Dept</button>
+      <button class="chip" data-msg="What scholarships are available?">🏆 Scholarships</button>
+      <button class="chip" data-msg="Show latest notices">📢 Notices</button>
+      <button class="chip" data-msg="Contact information">📞 Contact</button>
+      <button class="chip" data-msg="When is the Machine Learning exam?">🤖 ML Exam</button>
+    </div>
+
+    <!-- Messages area -->
+    <div class="messages" id="messages"></div>
+
+    <!-- Input bar -->
+    <div class="input-bar">
+      <textarea
+        id="chatInput"
+        placeholder="Ask me anything about UGV... (Enter to send, Shift+Enter for new line)"
+        rows="1"
+      ></textarea>
+      <button class="send-btn" id="sendBtn" title="Send">➤</button>
+    </div>
+
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
